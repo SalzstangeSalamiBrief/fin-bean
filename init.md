@@ -21,7 +21,7 @@ Each agent will be used for their corresponding tasks
 
 ```
 - readme.md
-- .gitignore
+- .gitignore        # contains files/folders to ignore by git
 - project/       # Contains files related to the workflow
     - spec.md       # The document that contains the whole spec of project and will change over time
     - features/        # contains all features that should be implemented
@@ -47,6 +47,9 @@ Each agent will be used for their corresponding tasks
 
 - the project/spec.md file contains the whole spec of the project and will change over time
 - Each feature in the project/spec.md file will added to its own md file in the project/features
+  - the content will be concise
+- after each feature/bug is defined the user will review these files
+- If a feature/bug is getting built/fixed then a new git branch \<feature\|bug\>\/\<feature_name\> will be created
 
 ### Feature files
 
@@ -86,6 +89,9 @@ Each agent will be used for their corresponding tasks
 - keycloak
   - authentication
   - will be provided via docker
+- git
+  - version control
+  - ignores files
 
 ### frontend
 
