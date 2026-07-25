@@ -23,7 +23,8 @@ Each agent will be used for their corresponding tasks
 - readme.md
 - .gitignore        # contains files/folders to ignore by git
 - project/       # Contains files related to the workflow
-    - spec.md       # The document that contains the whole spec of project and will change over time
+    - workflow.md     # contains the workflow for the project and will be used by all agents
+    - project.md       # The document that contains the whole spec of project and will change over time. The workflow etc. in this file will be used by all agents
     - features/        # contains all features that should be implemented
         - feature_<number>_<short_description>.<todo|active|finished>.md        # a file that contains a feature with its description
     - bugs/         # contains all bugs found
@@ -53,10 +54,12 @@ Each agent will be used for their corresponding tasks
 
 ### Feature files
 
-- File name: feature\_\<number\>\_\<short_description\>.\<todo\|active\|finished\>.md
-  - If the feature is planned but not started, the file name contains _todo_
-  - If the feature is currently under development, the file name contains _active_
-  - If the feature is implemented, the file name contains \_finished
+- File name: feature\_\<number\>\_\<short_description\>.\<status\>.md
+  - status
+    - If the feature is planned but not started, the file name contains _todo_
+    - If the feature is currently under development, the file name contains _active_
+    - If the feature is implemented, the file name contains \_finished
+  - the number starts at 1 and increments with each new file
 - Structure:
   ```md
       # <feature_name>
@@ -67,10 +70,13 @@ Each agent will be used for their corresponding tasks
 
 ### Bug files
 
-- File name: bug\_\<number\>\_\<short_description\>.\<todo\|active\|finished\>.md
-  - If the bug is planned but not started, the file name contains _todo_
-  - If the bug is currently under development, the file name contains _active_
-  - If the bug is implemented, the file name contains \_finished
+- File name: bug\_\<number\>\_\<short_description\>.\<status\>.md
+  - status
+    - If the bug is planned but not started, the file name contains _todo_
+    - If the bug is currently under development, the file name contains _active_
+    - If the bug is implemented, the file name contains _finished_
+  - the number starts at 1 and increments with each new file
+
 - Structure:
   ```md
       # <bug_name>
