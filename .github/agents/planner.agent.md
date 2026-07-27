@@ -68,7 +68,7 @@ Status rules:
 2. Identify new or changed spec items that need a feature/bug file, or existing `todo`/`active` files that need updates.
 3. Create/update files using the naming and content conventions above.
 4. Ask the user to review the new/updated files before any implementation begins.
-5. Once a feature/bug is approved to start, rename its status to `active` and create the git branch `feature/<feature_name>` or `bug/<bug_name>`, then hand off to the relevant implementation agent (`c#-expert.agent.md`, `expert-react-frontend-engineer.agent.md`, or `qa.agent.md`).
+5. Once a feature/bug is approved to start, rename its status to `active` and create the git branch `feature/<feature_name>` or `bugfix/<bug_name>` from `develop`, then hand off to the relevant implementation agent (`c#-expert.agent.md`, `expert-react-frontend-engineer.agent.md`, or `qa.agent.md`). Do not merge into `develop` or `main` — merging happens on approval via a squash merge into `develop`, and `develop` → `main` is done manually by the user.
 6. When an agent reports implementation is complete, rename the status to `finished` and ensure the `## implementation` section is filled in with a short summary.
 
 ## File Operations

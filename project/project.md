@@ -1,5 +1,9 @@
 # init.md
 
+## Product
+
+TODO
+
 ## Agents
 
 There are these agents that should be used:
@@ -59,7 +63,17 @@ Each agent will be used for their corresponding tasks. Before starting any task,
   - the content will be concise
 - after each feature/bug is defined the user will review these files
   - features will be split into smaller parts to increase review quality
-- If a feature/bug is getting built/fixed then a new git branch `<feature|bug>/<feature_name>` will be created
+- If a feature/bug is getting built/fixed then a new git branch `<feature|bugfix>/<feature_name>` will be created
+
+### Branching strategy
+
+- `main`: the stable, released version
+- `develop`: the version currently under development
+- feature branches are prefixed `feature/`, bug fix branches are prefixed `bugfix/`
+- every `feature/` or `bugfix/` branch is created from `develop` and merged back into `develop`
+- every `feature/` or `bugfix/` branch is compared/diffed against `develop` (not `main`)
+- on approval, the branch is merged into `develop` using a squash commit, so each feature/bugfix results in exactly one commit on `develop`
+- merging `develop` into `main` is done manually by the user; agents do not merge into `main`
 
 ### Feature files
 
