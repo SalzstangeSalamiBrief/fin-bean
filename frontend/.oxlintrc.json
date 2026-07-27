@@ -93,7 +93,7 @@
       "jsPlugins": ["@stylistic/eslint-plugin"],
       "files": ["**/*.{js,ts,tsx}"],
       "rules": {
-        "@stylistic/quotes": ["error", "single"],
+        "@stylistic/quotes": ["error", "single", { "avoidEscape": true }],
         "@stylistic/quote-props": ["error", "as-needed"],
         "no-shadow": "warn",
         "no-var": "error",
