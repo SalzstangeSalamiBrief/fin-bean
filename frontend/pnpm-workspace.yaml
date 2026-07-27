@@ -1,0 +1,4 @@
+allowBuilds:
+  better-sqlite3: false
+  #  TODO COMMENT IN AT 02.08.2026
+  # minimumReleaseAge: 10080 # 1 week

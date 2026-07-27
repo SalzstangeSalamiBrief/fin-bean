@@ -1,0 +1,34 @@
+{
+  "name": "fin-bean-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "check": "prettier --write . && oxlint --fix",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "preview": "vite preview",
+    "generate:api": "orval --config ./orval.config.ts",
+    "cve:check": "cve-lite ."
+  },
+  "dependencies": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.2",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "@vitejs/plugin-react": "6.0.3",
+    "oxlint": "1.71.0",
+    "oxfmt": "0.58.0",
+    "typescript": "6.0.2",
+    "cve-lite-cli": "1.26.0",
+    "vite": "8.1.1"
+  },
+  "packageManager": "pnpm@11.11.0"
+}
