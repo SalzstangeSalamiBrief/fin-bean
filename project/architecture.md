@@ -47,14 +47,19 @@
   - version control
   - ignores files
 - pnpm
-    - pnpm is the used package manager for the frontend
-    - DONT use npm
+  - pnpm is the used package manager for the frontend
+  - DONT use npm
 
 ### frontend
 
 #### dependencies
 
 Dependencies will be added using the specific fixed/pinned version.
+Only dependencies that have a specific minimum release age and don't contain CVEs will be used:
+
+- minimum release age is defined in pnpm-workspace-yaml
+- CVEs will be checked periodically
+- In the frontend the script "cve:check" is used
 
 - react 19 (SPA)
   - frontend framework
@@ -80,7 +85,6 @@ Dependencies will be added using the specific fixed/pinned version.
   - formatting
 - zustand
   - state management
-
 
 ### backend
 

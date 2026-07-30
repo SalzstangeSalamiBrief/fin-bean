@@ -19,8 +19,16 @@ There are these agents that should be used:
   - used for planning qa processes
   - Writes Tests FE/BE
   - Bugs will be added as md file to the bug folder
+- se-security.agent.md
+  - used for security reviews
+  - before each testing loop, checks the changes for security issues
 
 Each agent will be used for their corresponding tasks. Before starting any task, an agent must read `project/product.md`, `project/architecture.md` and this file (`project/workflow.md`) plus the relevant feature/bug file in `project/features` or `project/bugs` to stay aligned with the current spec and workflow.
+
+### Testing loop
+
+- before each testing loop, se-security.agent.md checks the changes for security issues
+- only after the security check passes does qa.agent.md run/continue the testing loop
 
 ## Spec lifecycle
 
