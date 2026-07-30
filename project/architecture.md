@@ -49,7 +49,11 @@
 - pnpm
   - pnpm is the used package manager for the frontend
   - DONT use npm
+
+### Other
 - Errors between backend and frontend will be communicated using the ProblemDetails standard
+- local environment variables are used and not pushed
+  - a template file with placeholder is pushed
 
 ### frontend
 

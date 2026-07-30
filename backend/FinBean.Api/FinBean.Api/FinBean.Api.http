@@ -1,0 +1,6 @@
+@FinBean.Api_HostAddress = http://localhost:5216
+
+GET {{FinBean.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
