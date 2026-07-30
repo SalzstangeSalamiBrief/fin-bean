@@ -49,6 +49,7 @@
 - pnpm
   - pnpm is the used package manager for the frontend
   - DONT use npm
+- Errors between backend and frontend will be communicated using the ProblemDetails standard
 
 ### frontend
 
@@ -85,8 +86,16 @@ Only dependencies that have a specific minimum release age and don't contain CVE
   - formatting
 - zustand
   - state management
+- Paraglide
+  - used for i18n
+- lucide
+  - icons
 
 ### backend
+
+The backend is a .net application that uses a combination Domain driven design and a multi layer architecture.
+E. g. API, Core (shared parts) Database and Authentication will be one layer (Project).
+Other features will have their own projects
 
 - c#
 - .net 10
