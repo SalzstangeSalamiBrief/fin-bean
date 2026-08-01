@@ -205,3 +205,5 @@ nunit-*.xml
 
 .env
 .idea
+
+appsettings.Development.json
