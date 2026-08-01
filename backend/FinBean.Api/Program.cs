@@ -14,7 +14,7 @@ builder.Services.AddKeycloakOptions();
 builder.Services.AddKeycloakAuthentication();
 builder.Services.AddCurrentUserService();
 builder.Services.AddProblemDetails();
-builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddExceptionHandler<ExceptionHandlerMiddleware>();
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

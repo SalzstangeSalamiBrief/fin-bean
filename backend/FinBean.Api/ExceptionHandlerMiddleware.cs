@@ -7,10 +7,10 @@ namespace FinBean.Api;
 /// Converts unhandled exceptions into ProblemDetails responses. Exception details are only
 /// included in the response body when running in the Development environment.
 /// </summary>
-public class GlobalExceptionHandler(
+public class ExceptionHandlerMiddleware(
     IHostEnvironment environment,
     IProblemDetailsService problemDetailsService,
-    ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
+    ILogger<ExceptionHandlerMiddleware> logger) : IExceptionHandler
 {
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
