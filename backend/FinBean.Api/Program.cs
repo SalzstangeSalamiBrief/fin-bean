@@ -1,3 +1,5 @@
+using FinBean.Api;
+using FinBean.Authentication;
 using FinBean.Database;
 using Scalar.AspNetCore;
 
@@ -8,6 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDatabaseOptions();
 builder.Services.AddDatabaseContext();
+builder.Services.AddKeycloakOptions();
+builder.Services.AddKeycloakAuthentication();
+builder.Services.AddCurrentUserService();
+builder.Services.AddProblemDetails();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -21,8 +28,12 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+app.UseExceptionHandler();
+app.UseStatusCodePages();
+
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 

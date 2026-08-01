@@ -8,11 +8,17 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.OpenApi" Version="2.7.5" />
         <PackageReference Include="Scalar.AspNetCore" Version="2.16.17" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\FinBean.Database\FinBean.Database.csproj" />
+        <ProjectReference Include="..\FinBean.Authentication\FinBean.Authentication.csproj" />
         <ProjectReference Include="..\FinBean.Core\FinBean.Core.csproj" />
+        <ProjectReference Include="..\FinBean.Database\FinBean.Database.csproj" />
     </ItemGroup>
 </Project>

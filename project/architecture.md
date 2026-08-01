@@ -103,5 +103,21 @@ Other features will have their own projects
 
 - c#
 - .net 10
+- dependency injection
+  - each project has a single DI class (e.g. `<ProjectName>Di.cs`) that is the entry point for that project — it registers the project's services, options and other dependencies via extension methods (e.g. `AddDatabaseContext()`, `AddDatabaseOptions()`) so `Program.cs` only composes `builder.Services.Add<Project>...()` calls
+  - registration extension methods are added to `IServiceCollection` (or other relevant types) using C# extension members/methods, not inline setup in `Program.cs`
+- options pattern
+  - configuration is bound to strongly typed options classes (e.g. `DatabaseOptions`) via `AddOptions<T>().BindConfiguration(...)`, validated with data annotations and `ValidateOnStart()`
+  - options classes are consumed via `IOptions<T>`/`IOptionsSnapshot<T>`, never by reading `IConfiguration` directly in business/service code
 - ef core
   - database adapter
+  - schema changes are captured as real EF Core migrations (`dotnet ef migrations add ...`), not just DbContext/model changes
+- authentication
+  - JWT bearer tokens issued by Keycloak are validated on the API (issuer/audience/lifetime validation enabled)
+  - current user identity is resolved from validated token claims via an `ICurrentUserService` abstraction (`FinBean.Core`), never trusted from request input/headers
+  - every data access path scopes queries/writes to the authenticated user's own data — no endpoint returns or mutates another user's rows
+  - protected endpoints are explicitly marked `[Authorize]`; anonymous endpoints are the exception and must be justified
+- error handling
+  - all error responses use the ASP.NET Core ProblemDetails standard (`AddProblemDetails()` + exception/status-code middleware)
+- openapi
+  - an OpenAPI document is exposed so the frontend can generate a typed client via Orval

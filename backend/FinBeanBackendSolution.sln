@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinBean.Database", "FinBean
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinBean.Api", "FinBean.Api\FinBean.Api.csproj", "{BE1CC123-C280-49F1-AA57-D70EBF806D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinBean.Authentication", "FinBean.Authentication\FinBean.Authentication.csproj", "{F5B3A04E-E8FD-4F66-9DDA-E60BACA034B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{BE1CC123-C280-49F1-AA57-D70EBF806D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1CC123-C280-49F1-AA57-D70EBF806D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1CC123-C280-49F1-AA57-D70EBF806D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B3A04E-E8FD-4F66-9DDA-E60BACA034B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B3A04E-E8FD-4F66-9DDA-E60BACA034B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B3A04E-E8FD-4F66-9DDA-E60BACA034B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B3A04E-E8FD-4F66-9DDA-E60BACA034B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

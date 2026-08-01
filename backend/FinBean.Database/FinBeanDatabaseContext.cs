@@ -19,5 +19,9 @@ public class FinBeanDatabaseContext(IOptions<DatabaseOptions> databaseOptions): 
     {
         modelBuilder.Entity<UserProfile>()
             .HasKey(up => up.Id);
+
+        modelBuilder.Entity<UserProfile>()
+            .HasIndex(up => up.KeycloakUserId)
+            .IsUnique();
     }
 }
