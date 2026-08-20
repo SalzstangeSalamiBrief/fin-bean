@@ -1,7 +1,40 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    /* Linting */
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "$paraglide/*": ["./src/paraglide/*"],
+      "$components/*": ["./src/components/*"],
+      "$assets/*": ["./src/assets/*"],
+      "$sharedComponents/*": ["./src/sharedComponents/*"],
+      "$features/*": ["./src/features/*"],
+      "$contexts/*": ["./src/contexts/*"],
+      "$models/*": ["./src/models/*"],
+      "$hooks/*": ["./src/hooks/*"],
+      "$stores/*": ["./src/stores/*"],
+      "$enums/*": ["./src/enums/*"],
+      "$lib/*": ["./src/lib/*"],
+      "$queries/*": ["./src/queries/*"],
+      "$clients/*": ["./src/clients/*"]
+    }
+  }
 }

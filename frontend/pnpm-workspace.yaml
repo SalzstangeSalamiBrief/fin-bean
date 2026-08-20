@@ -1,5 +1,25 @@
 allowBuilds:
-  better-sqlite3: false
+  better-sqlite3: true
   esbuild: true
-  #  TODO COMMENT IN AT 02.08.2026
+  lightningcss: true
+  # TODO COMMENT IN 16.08.2026
   # minimumReleaseAge: 10080 # 1 week
+minimumReleaseAgeExclude:
+  - '@tanstack/form-core@1.33.4'
+  - '@tanstack/match-sorter-utils@9.1.2'
+  - '@tanstack/react-form@1.33.4'
+  - '@tanstack/react-table@9.1.2'
+  - '@tanstack/table-core@9.1.2'
+  - '@orval/angular@8.24.0'
+  - '@orval/axios@8.24.0'
+  - '@orval/core@8.24.0'
+  - '@orval/effect@8.24.0'
+  - '@orval/fetch@8.24.0'
+  - '@orval/hono@8.24.0'
+  - '@orval/mcp@8.24.0'
+  - '@orval/mock@8.24.0'
+  - '@orval/query@8.24.0'
+  - '@orval/solid-start@8.24.0'
+  - '@orval/swr@8.24.0'
+  - '@orval/zod@8.24.0'
+  - orval@8.24.0

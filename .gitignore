@@ -207,3 +207,7 @@ nunit-*.xml
 .idea
 
 appsettings.Development.json
+
+**/paraglide.inlang/*
+!**/paraglide.inlang/settings.json
+!**/paraglide.inlang/README.md

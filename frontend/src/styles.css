@@ -1,3 +1,6 @@
+@import 'tailwindcss';
+@import '@radix-ui/themes/styles.css';
+
 body,
 #root {
   height: 100lvh;
