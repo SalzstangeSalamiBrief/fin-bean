@@ -14,7 +14,7 @@ const config = defineConfig({
     devtools(),
     paraglideVitePlugin({
       project: './paraglide.inlang',
-      outdir: './src/paraglide.inlang',
+      outdir: './src/paraglide',
       strategy: ['url', 'baseLocale'],
       urlPatterns: translatedPathnames,
       emitGitIgnore: true,

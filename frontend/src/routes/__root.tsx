@@ -14,6 +14,7 @@ import TanStackQueryDevtools from '../integrations/tanstack-query/devtools';
 import appCss from '../styles.css?url';
 
 import ParaglideLocaleSwitcher from '$components/LocaleSwitcher';
+import { m } from '$paraglide/messages';
 import type { QueryClient } from '@tanstack/react-query';
 
 interface MyRouterContext {
@@ -64,7 +65,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Theme>
           {children}
           <ParaglideLocaleSwitcher />
-          <h1 className='bg-red-700'>hello world</h1>
+          <h1 className='bg-red-700'>{m.helloWorld()}</h1>
           <Button>Hello world</Button>
           <Camera />
         </Theme>

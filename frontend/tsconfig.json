@@ -22,7 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "paths": {
-      "$paraglide/*": ["./src/paraglide.inlang/*"],
+      "$paraglide/*": ["./src/paraglide/*"],
       "$components/*": ["./src/components/*"],
       "$assets/*": ["./src/assets/*"],
       "$sharedComponents/*": ["./src/sharedComponents/*"],

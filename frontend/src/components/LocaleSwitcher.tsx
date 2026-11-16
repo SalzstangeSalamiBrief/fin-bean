@@ -2,7 +2,6 @@
 // - Paraglide docs: https://inlang.com/m/gerre34r/library-inlang-paraglideJs
 // - Router example: https://github.com/TanStack/router/tree/main/examples/react/paraglide#switching-locale
 // TOD OFIX
-import { m } from '$paraglide/i18n';
 import { getLocale, locales, setLocale } from '$paraglide/runtime';
 
 export default function ParaglideLocaleSwitcher() {
@@ -16,11 +15,10 @@ export default function ParaglideLocaleSwitcher() {
         alignItems: 'center',
         color: 'inherit',
       }}
-      aria-label={m.language_label()}
+      // TODO LABEL
+      aria-label={currentLocale}
     >
-      <span style={{ opacity: 0.85 }}>
-        {m.current_locale({ locale: currentLocale })}
-      </span>
+      <span style={{ opacity: 0.85 }}>{currentLocale}</span>
       <div style={{ display: 'flex', gap: '0.25rem' }}>
         {locales.map((locale) => {
           return (
