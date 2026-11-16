@@ -1,7 +1,8 @@
 // Locale switcher refs:
 // - Paraglide docs: https://inlang.com/m/gerre34r/library-inlang-paraglideJs
 // - Router example: https://github.com/TanStack/router/tree/main/examples/react/paraglide#switching-locale
-import { m } from '$paraglide/messages';
+// TOD OFIX
+import { m } from '$paraglide/i18n';
 import { getLocale, locales, setLocale } from '$paraglide/runtime';
 
 export default function ParaglideLocaleSwitcher() {
